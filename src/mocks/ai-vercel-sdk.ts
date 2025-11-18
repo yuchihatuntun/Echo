@@ -5,7 +5,7 @@ export type ChatMessage = {
   content: string;
 };
 
-export type Provider = "openai" | "anthropic" | "google" | "groq" | string;
+export type Provider = "qwen" | "doubao" | "deepseek" | string;
 
 export type GenerateChatOptions = {
   provider?: Provider;
@@ -17,10 +17,9 @@ export type GenerateChatOptions = {
 
 export function hasProviderKey(provider: Provider): boolean {
   const map: Record<string, string | undefined> = {
-    openai: process.env.OPENAI_API_KEY,
-    anthropic: process.env.ANTHROPIC_API_KEY,
-    google: process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY,
-    groq: process.env.GROQ_API_KEY,
+    qwen: process.env.QWEN_API_KEY || process.env.ALIBABA_API_KEY,
+    doubao: process.env.DOUBAO_API_KEY,
+    deepseek: process.env.DEEPSEEK_API_KEY,
   };
   const specific = map[provider];
   return Boolean(process.env.AI_API_KEY || specific);

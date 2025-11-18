@@ -84,36 +84,27 @@ type ProviderOption = {
 
 const providers: ProviderOption[] = [
   {
-    id: "openai",
-    label: "OpenAI",
+    id: "qwen",
+    label: "Qwen",
     models: [
-      { id: "gpt-4o", label: "GPT-4o" },
-      { id: "gpt-4o-mini", label: "GPT-4o mini" },
-      { id: "o3-mini", label: "O3 mini" },
+      { id: "qwen3-max", label: "Qwen3 Max" },
+      { id: "qwen3-vl-plus", label: "Qwen3 VL Plus" },
     ],
   },
   {
-    id: "anthropic",
-    label: "Anthropic",
+    id: "doubao",
+    label: "Doubao",
     models: [
-      { id: "claude-3.7-sonnet", label: "Claude 3.7 Sonnet" },
-      { id: "claude-3.5-haiku", label: "Claude 3.5 Haiku" },
+      { id: "doubao-seed-1-6-251015", label: "Doubao Seed 1.6" },
+      { id: "kimi-k2-250905", label: "Kimi K2" },
     ],
   },
   {
-    id: "google",
-    label: "Google Gemini",
+    id: "deepseek",
+    label: "DeepSeek",
     models: [
-      { id: "gemini-2.0-flash", label: "Gemini 2.0 Flash" },
-      { id: "gemini-1.5-pro", label: "Gemini 1.5 Pro" },
-    ],
-  },
-  {
-    id: "groq",
-    label: "Groq",
-    models: [
-      { id: "llama-3.1-70b", label: "Llama 3.1 70B" },
-      { id: "mixtral-8x7b", label: "Mixtral 8x7B" },
+      { id: "deepseek-chat", label: "DeepSeek Chat" },
+      { id: "deepseek-reasoner", label: "DeepSeek Reasoner" },
     ],
   },
 ];

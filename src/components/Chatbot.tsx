@@ -39,6 +39,7 @@ import {
   ThumbsUp,
   X,
 } from "lucide-react";
+import { generateChat } from '@ai-sdk/openai';
 
 type Role = "user" | "assistant";
 
